@@ -15,4 +15,4 @@
 
 </ul>
 
-![snapshot](images/snapshot.PNG)<br>
+![snapshot](Leaflet-Step-1/images/snapshot.PNG)<br>
