@@ -15,4 +15,4 @@
 
 </ul>
 
-![snapshot](img/snapshot.PNG)<br>
+![snapshot](images/snapshot.PNG)<br>
