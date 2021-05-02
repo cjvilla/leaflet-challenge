@@ -14,5 +14,3 @@
     <li>popus that provide additional information about the earthquake when a marker is clicked</li>
 
 </ul>
-
-![snapshot](../Leaflet-Step-1/snapshot.PNG)<br>
