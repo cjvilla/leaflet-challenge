@@ -1,9 +1,8 @@
-// store url
+// Store our API endpoint inside queryUrl
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
-// request json data
+// Perform a GET request to the query URL
 d3.json(queryUrl, function(data) {
-    //prints out data
   console.log(data)
 // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data);
@@ -20,13 +19,15 @@ function createFeatures(earthquakeData) {
     });
   }
 
-  // pop up upon marker
+  // Define a function we want to run once for each feature in the features array
+  // Give each feature a popup describing the place and time of the earthquake
   function onEachFeature(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p><hr><p>" + feature.properties.mag + "</p>");
   }
 
- // layer creation
+  // Create a GeoJSON layer containing the features array on the earthquakeData object
+  // Run the onEachFeature function once for each piece of data in the array
   var earthquakes = L.geoJSON(earthquakeData, {
     onEachFeature: onEachFeature,
     pointToLayer: onEachLayer
@@ -131,10 +132,10 @@ function createMap(earthquakes) {
 function getColor(magnitude) {
     // Conditionals for magnitude
     if (magnitude >= 5) {
-      return "red";
+      return "FireBrick";
     }
     else if (magnitude >= 4) {
-      return "peru";
+      return "OrangeRed";
     }
     else if (magnitude >= 3) {
      return "darkorange";
