@@ -15,4 +15,4 @@
 
 </ul>
 
-<a href="../static/img/snapshot.png">Link to 'All Eartquakes from the past 7 days'</a>
+![snapshot](static/img/snapshot.PNG)<br>
