@@ -15,4 +15,4 @@
 
 </ul>
 
-![snapshot](../static/img/snapshot.PNG)<br>
+![snapshot](img/snapshot.PNG)<br>
