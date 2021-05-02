@@ -14,3 +14,5 @@
     <li>popus that provide additional information about the earthquake when a marker is clicked</li>
 
 </ul>
+
+<a href="../static/img/snapshot.png">Link to 'All Eartquakes from the past 7 days'</a>
