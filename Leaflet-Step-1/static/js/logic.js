@@ -1,8 +1,9 @@
 // store url
 var queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
-// Perform a GET request to the query URL
+// request json data
 d3.json(queryUrl, function(data) {
+    //prints out data
   console.log(data)
 // Once we get a response, send the data.features object to the createFeatures function
   createFeatures(data);
@@ -19,15 +20,13 @@ function createFeatures(earthquakeData) {
     });
   }
 
-  // Define a function we want to run once for each feature in the features array
-  // Give each feature a popup describing the place and time of the earthquake
+  // pop up upon marker
   function onEachFeature(feature, layer) {
     layer.bindPopup("<h3>" + feature.properties.place +
       "</h3><hr><p>" + new Date(feature.properties.time) + "</p><hr><p>" + feature.properties.mag + "</p>");
   }
 
-  // Create a GeoJSON layer containing the features array on the earthquakeData object
-  // Run the onEachFeature function once for each piece of data in the array
+ // layer creation
   var earthquakes = L.geoJSON(earthquakeData, {
     onEachFeature: onEachFeature,
     pointToLayer: onEachLayer
